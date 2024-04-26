@@ -6,6 +6,7 @@
     <color name="darkGreen">#009900</color>
     <color name="textColor">#FBFFFB</color>
     <color name="hinttextColor">#BDCCBD</color>
+    <color name="buttonColor">#0FB7D1</color>
 
     <color name="ContentTextOrangeColor">#AC782B</color>
     <color name="ContentTextGreenColor">#17C317</color>

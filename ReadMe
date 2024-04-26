@@ -1,0 +1,11 @@
+Add Audio File -> inside the res directory -> create raw directory
+
+ref -> https://developer.android.com/reference/android/media/MediaPlayer
+
+lateinit -> means we are going to initialize later
+
+Add Image File -> res -> import drawable directory inside
+
+Image -> (app -> new)
+       Vector Asset -> create icon as xml file -> use for different size of screens
+       Image Asset -> need to add various size images for different size of screens

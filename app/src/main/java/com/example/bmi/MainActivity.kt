@@ -1,6 +1,7 @@
 package com.example.bmi
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
@@ -31,6 +32,8 @@ class MainActivity : AppCompatActivity() {
         val heightText = findViewById<EditText>(R.id.heighteditTextNumber)
         val buttonFunction = findViewById<Button>(R.id.buttonfunc)
 
+        val nextPage = findViewById<Button>(R.id.gomain2)
+
 
         Log.i("mytag", "outside func")
 //        val totalText = findViewById<TextView>(R.id.outputtextview) //not working this format
@@ -47,6 +50,11 @@ class MainActivity : AppCompatActivity() {
             } else{
                 makeText(this@MainActivity,"Please Enter Your details correctly", LENGTH_SHORT).show()
             }
+        }
+
+        nextPage.setOnClickListener {
+            var intent = Intent(this,MainActivity2::class.java)
+            startActivity(intent)
         }
     }
 
@@ -76,7 +84,7 @@ class MainActivity : AppCompatActivity() {
             bmi <18.50 -> {
                 result = "UnderWeight"
                 color = R.color.ContentTextOrangeColor
-                }
+            }
             bmi in 18.50..24.50 -> { result = "normal"
                 color = R.color.ContentTextGreenColor}
             bmi in 24.5..29.9 -> { result = "Overweight"
