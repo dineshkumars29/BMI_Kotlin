@@ -84,15 +84,15 @@ class MainActivity2 : AppCompatActivity() {
 
         })
         seekBar.max = mediaPlayer!!.duration
-        var tvPlayed = findViewById<TextView>(R.id.tvplayed)
-        var tvDue = findViewById<TextView>(R.id.tvdue)
+        val tvPlayed = findViewById<TextView>(R.id.tvplayed)
+        val tvDue = findViewById<TextView>(R.id.tvdue)
         runnable = Runnable {
             seekBar.progress = mediaPlayer!!.currentPosition
             val playedTime = mediaPlayer!!.currentPosition/1000
             val durationTime = mediaPlayer!!.duration/1000
-            tvPlayed.text = "$playedTime Sec"
+            tvPlayed.text = "$playedTime sec"
             val due = durationTime - playedTime
-            tvDue.text = "$due Sec"
+            tvDue.text = "$due sec"
             handler.postDelayed(runnable,1000)
         }
         handler.postDelayed(runnable,1000)
